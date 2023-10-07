@@ -1,0 +1,19 @@
+selenium-hub:
+  image: selenium/hub
+  ports:
+    - 4446:4444
+
+chromenode:
+  image: selenium/node-chrome-debug
+  ports:
+    - 4577
+  links:
+    - selenium-hub:hub
+
+firefoxnode:
+  image: selenium/node-firefox-debug
+  ports:
+    - 4578
+  links:
+    - selenium-hub:hub
+    

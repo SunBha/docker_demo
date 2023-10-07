@@ -1,0 +1,7 @@
+#getting Image 
+FROM alpine
+
+maintainer Sunny Bhatia <sunny.bhatia@thepsi.com>
+
+cmd ["echo", "hello world... from my first image"]
+
